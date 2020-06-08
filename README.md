@@ -33,20 +33,6 @@
 
 5. 该项目配置时候需要设置Google的Drive和colab路径，在Google Drive中的建立Yolo3文件夹，并在Yolo3文件夹中放入所需要的数据（obj.zip  obj.name obj.data Yolov3配置文件yolov3_custom2.cfg 分割训练数据文件generate_train.py ）以及建立backup文件夹(有用保存模型训练时候权重参数).---这里所需文件会提供
 
-   文件结构如：Google Drivve  ->  yolo3  ->  obj.zip
-
-&#x000D; &#x000D; &#x000D; &#x000D; &#x000D; ->  obj.name
-
-&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  obj.data
-
-&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  yolov3_custom2.cfg
-
-&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; -> generate_train.py 
-
-&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; -> backup
-
-   
-
 6. 该车牌定位YOLOv3模型训练的权重结果在:https://drive.google.com/file/d/1--Kmf45XzvjNPnrBXeVkunZolRn-N6J9/view?usp=sharing
 
 7. 模型所需数据和配置文件在:YOLOv3/yolo3
