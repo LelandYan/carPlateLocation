@@ -49,7 +49,9 @@
 
 9. 模型所需数据格式转为:transform.py
 
-10. **这里模型本身是只在图上圈出目标物体,并没有输出检测边框的大小,这里我是修改其源代码可以达到结果,替换其darknet/src/image.c文件，这里我们提供文件新的image.c文件,重新编译后,会在darknet所在的目录产生一个BoxValue.txt文件。修改的文件为darknet\image.c中的draw_detections_v3函数，一共修改三个地方，分别加入**
+10. 根据模型的结果来切割图片得到车牌代码:crop.py
+
+11. **这里模型本身是只在图上圈出目标物体,并没有输出检测边框的大小,这里我是修改其源代码可以达到结果,替换其darknet/src/image.c文件，这里我们提供文件新的image.c文件,重新编译后,会在darknet所在的目录产生一个BoxValue.txt文件。修改的文件为darknet\image.c中的draw_detections_v3函数，一共修改三个地方，分别加入**
 
     ```c
     //创建保存位置信息txt文档
@@ -65,7 +67,7 @@
     fclose(fp);
     ```
 
-    
+12. 根据我们得到的BoxValue.txt文件内容，可以使用crop.py文件对图像进行切割，得到cv_cut_thor.jpg切割的车牌
 
 ## 实例分割气球模型---Mask R-CNN
 
