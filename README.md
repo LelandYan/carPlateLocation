@@ -67,6 +67,18 @@
     fclose(fp);
     ```
 
+    ```html
+    <div align=center><img src="img/1.png" alt="Image text" width="300px" height="150px" />
+    ```
+
+    ```html
+    <div align=center><img src="img/2.png" alt="Image text" width="300px" height="150px" />
+    ```
+
+    ```html
+    <div align=center><img src="img/3.png" alt="Image text" width="300px" height="150px" />
+    ```
+
 12. 根据我们得到的BoxValue.txt文件内容，可以使用crop.py文件对图像进行切割，得到cv_cut_thor.jpg切割的车牌
 
 ## 实例分割气球模型---Mask R-CNN
