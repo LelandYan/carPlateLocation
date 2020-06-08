@@ -49,6 +49,24 @@
 
 9. 模型所需数据格式转为:transform.py
 
+10. **这里模型本身是只在图上圈出目标物体,并没有输出检测边框的大小,这里我是修改其源代码可以达到结果,替换其darknet/src/image.c文件，这里我们提供文件新的image.c文件,重新编译后,会在darknet所在的目录产生一个BoxValue.txt文件。**修改的文件为darknet\image.c中的draw_detections_v3函数，一共修改三个地方，分别加入
+
+    ```c
+    //创建保存位置信息txt文档
+    FILE *fp;
+    if ((fp = fopen("BoxValue.txt", "w+")) == NULL) {
+    printf("创建文档失败:\n");
+    }
+    
+    //输出坐标信息到文本文件
+    fprintf(fp, "左部边框的位置：%d 顶部边框的位置：%d 右部边框的位置：%d 底部边框的位置：%d\n", left, top, right, bot);
+    
+    //关闭坐标文本文件
+    fclose(fp);
+    ```
+
+    
+
 ## 实例分割气球模型---Mask R-CNN
 
 1. 需要下载的Mask R-CNN模型框架，模型原项目地址:https://github.com/matterport/Mask_RCNN 可按照其步骤进行安装所需要类库
