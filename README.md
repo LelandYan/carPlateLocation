@@ -1,9 +1,9 @@
 # 车牌定位功能
 ## 数据来源 
 
-**本项目使用的数据集为246张中文车牌数据集, 数据来源:**https://gitee.com/easypr/EasyPR/tree/master/resources/image/general_test
+**本项目使用的数据集为246张中文车牌数据集, 数据来源**:https://gitee.com/easypr/EasyPR/tree/master/resources/image/general_test
 
-**数据标注工具: **
+**数据标注工具**: 
 
 **labelImg 项目地址**:https://github.com/tzutalin/labelImg
 
@@ -35,15 +35,15 @@
 
    文件结构如：Google Drivve  ->  yolo3  ->  obj.zip
 
-   ​								                                      ->  obj.name
+   ​								                                      \t\t\t\t\t->  obj.name
 
-   ​											                          ->  obj.data
+   ​											                          \t\t\t\t\t->  obj.data
 
-   ​											                          ->  yolov3_custom2.cfg
+   ​											                          \t\t\t\t\t->  yolov3_custom2.cfg
 
-   ​																	   -> generate_train.py 
+   ​																	   \t\t\t\t\t-> generate_train.py 
 
-   ​											                           -> backup
+   ​											                           \t\t\t\t\t-> backup
 
    
 
