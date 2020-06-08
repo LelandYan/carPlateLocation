@@ -14,8 +14,16 @@
 **本项目将以下提供三种模型可以对车牌进行定位**
 
 1. 使用传统数字图像处理技术(Python-Opencv)，通过图像预处理->图像增强->二值化->边缘检测->图像提取分割
-2. 使用已经训练COO数据的目标检测模型(**Object Detection:YOLOv3**)，做迁移学习，对已经训练过COCO数据的模型卷积层权重参数进行微调，从而得到车牌定位功能的新模型。
+
+2. 使用已经训练COO数据的目标检测模型(**Object Detection:YOLOv3**)，做迁移学习，对已经训练过COCO数据的模型卷积层权重参数进行微调，从而得到车牌定位功能的新模型。效果如下:
+
+   <div align=center><img src="img/result2.png" alt="Image text" width="600px" height="360px" />
+   <div align=center><img src="img/result2cut.jpg" alt="Image text" width="116px" height="35px" />
+
 3. 使用已经训练实例分割气球模型(**Instance Segmentation:Mask R-CNN**)，做迁移学习，对已经训练过COCO数据模型参数进行微调，从而得到车牌定位功能的新模型。
+
+   <div align=center><img src="img/result3.png" alt="Image text" width="600px" height="360px" />
+   <div align=center><img src="img/result3cut.png" alt="Image text" width="116px" height="35px" />
 
 ## 传统数字图像处理方法
 
