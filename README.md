@@ -35,7 +35,7 @@
 
    文件结构如：Google Drivve  ->  yolo3  ->  obj.zip
 
-&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  obj.name
+&#x000D; &#x000D; &#x000D; &#x000D; &#x000D; ->  obj.name
 
 &#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  obj.data
 
