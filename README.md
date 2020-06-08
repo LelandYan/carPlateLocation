@@ -35,15 +35,15 @@
 
    文件结构如：Google Drivve  ->  yolo3  ->  obj.zip
 
-   ​								                                      \t\t\t\t\t->  obj.name
+&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  obj.name
 
-   ​											                          \t\t\t\t\t->  obj.data
+&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  obj.data
 
-   ​											                          \t\t\t\t\t->  yolov3_custom2.cfg
+&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; ->  yolov3_custom2.cfg
 
-   ​																	   \t\t\t\t\t-> generate_train.py 
+&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; -> generate_train.py 
 
-   ​											                           \t\t\t\t\t-> backup
+&#x000D;&#x000D;&#x000D;&#x000D;&#x000D; -> backup
 
    
 
