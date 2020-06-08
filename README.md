@@ -31,7 +31,7 @@
    <div align=center><img src="img/result2.png" alt="Image text" width="600px" height="360px" />
    <div align=center><img src="img/result2cut.jpg" alt="Image text" width="116px" height="35px" />
 
-3. 使用已经训练实例分割气球模型(**Instance Segmentation:Mask R-CNN**)，做迁移学习，对已经训练过COCO数据模型参数进行微调，从而得到车牌定位功能的新模型。
+3. 使用已经训练实例分割气球模型(**Instance Segmentation:Mask R-CNN**)，做迁移学习，对已经训练过COCO数据模型参数进行微调，从而得到车牌定位功能的新模型。模型介绍: https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46
 
    <div align=center><img src="img/result3.png" alt="Image text" width="600px" height="360px" />
    <div align=center><img src="img/result3cut.png" alt="Image text" width="116px" height="35px" />
