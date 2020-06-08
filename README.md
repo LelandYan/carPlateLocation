@@ -1,4 +1,12 @@
 # 车牌定位功能
+| 模型               | 使用技术              | 效果 | 是否完成 |
+| ------------------ | --------------------- | ---- | -------- |
+| **python3-opencv** | **传统数字图像处理**  | 一般 | 是       |
+| **YOLOv3**         | **神经网络+迁移学习** | 良好 | 是       |
+| **Mask-RCNN**      | **神经网络+迁移学习** | 较好 | 是       |
+
+**效果排序(从高到底): Mask-RCNN > YOLOv3 > python3-opencv** 
+
 ## 数据来源 
 
 **本项目使用的数据集为246张中文车牌数据集, 数据来源**:https://gitee.com/easypr/EasyPR/tree/master/resources/image/general_test
