@@ -60,7 +60,7 @@
 
 ## 目标检测模型 ---YOLOv3
 
-1. 该项目是在colab环境下训练测试,本身为linux环境,对于模型windows下部署可以参考链接: [https://www.zhezhi.press/2019/10/17/win10-vs2019-%E9%85%8D%E7%BD%AEdarknet-yolov3/](https://www.zhezhi.press/2019/10/17/win10-vs2019-配置darknet-yolov3/)
+1. 该项目是在colab环境下训练测试,本身为linux环境,对于模型windows下部署可以参考链接: [https://www.zhezhi.press/2019/10/17/win10-vs2019-%E9%85%8D%E7%BD%AEdarknet-yolov3/](https://www.zhezhi.press/2019/10/17/win10-vs2019-配置darknet-yolov3/) 这里使用darknet而不使用tf或portch,因为穷(darknet执行效率和精度都要高),就这都是白嫖colab的gpu.
 
 2. 需要安装的Yolov3模型框架，模型原项目地址:https://github.com/AlexeyAB/darknet (这里选择使用这个版本是为了兼容window平台)可按照其步骤进行安装。
 
@@ -108,7 +108,7 @@
 
 ## 实例分割气球模型---Mask R-CNN
 
-1. 该项目是在colab环境下训练测试,如果使用windows平台部署，可以安装所需类库见MaskRCNN\requirements.txt,模型具体使用代码详细见MaskRCNN\carPlateLocation.py
+1. 该项目是在colab环境下训练测试,如果使用windows平台部署，可以安装所需类库见MaskRCNN\requirements.txt,**执行模型**具体使用代码详细见MaskRCNN\carPlateLocation.py
 
    我们使用anaconda虚拟环境,执行下列命令即可完成安装所需类库
 
