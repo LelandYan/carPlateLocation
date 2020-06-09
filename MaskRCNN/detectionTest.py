@@ -114,40 +114,40 @@ r = results[0]
 visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
                             dataset.class_names, r['scores'], ax=ax,
                             title="Predictions")
-# # 1.提取车牌区域，只取第一个车牌
-# mask = r['masks'][:, :, 0].astype(np.uint8)
-# plt.show()
-# _, contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-# cnt = contours[0]
-# epsilon = 0.1 * cv2.arcLength(cnt, True)
-# approx = cv2.approxPolyDP(cnt, epsilon, True)
-# approx = approx.squeeze()
-#
-# if approx.shape == (4, 2):
-#     box = np.zeros_like(approx)
-#     box[:, 0] = approx[:, 1]
-#     box[:, 1] = approx[:, 0]
-# else:
-#     rect = cv2.minAreaRect(np.array(np.nonzero(mask)).T)
-#     box = cv2.boxPoints(rect).astype(np.int)
-#
-# y0, x0 = box.min(axis=0)
-# y1, x1 = box.max(axis=0)
-# img = image[y0:y1, x0:x1]
-# io.imshow(img)
-# plt.show()
-# box[:, 0] -= y0
-# box[:, 1] -= x0
-# # 调整box顺序，从左上角开始，逆时针转动
-# i0 = (box[:, 0] + box[:, 1]).argmin()
-# box = box[[i0, (i0 + 1) % 4, (i0 + 2) % 4, (i0 + 3) % 4]]
-# plt.scatter(box[:, 1], box[:, 0], c='r')
-# # 2.矫正车牌
-# h = np.max([box[1][0] - box[0][0], box[2][0] - box[3][0]])
-# w = np.max([box[2][1] - box[1][1], box[3][1] - box[0][1]])
-# box2 = np.array([(0, 0), (h, 0), (h, w), (0, w)])
-# M = cv2.getPerspectiveTransform(box[:, ::-1].astype(np.float32), box2[:, ::-1].astype(np.float32))
-# img = cv2.warpPerspective(img, M, (w, h))
-# img = cv2.resize(img, (220, 70))
-# io.imshow(img)
-# plt.show()
+# 1.提取车牌区域，只取第一个车牌
+mask = r['masks'][:, :, 0].astype(np.uint8)
+plt.show()
+_, contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+cnt = contours[0]
+epsilon = 0.1 * cv2.arcLength(cnt, True)
+approx = cv2.approxPolyDP(cnt, epsilon, True)
+approx = approx.squeeze()
+
+if approx.shape == (4, 2):
+    box = np.zeros_like(approx)
+    box[:, 0] = approx[:, 1]
+    box[:, 1] = approx[:, 0]
+else:
+    rect = cv2.minAreaRect(np.array(np.nonzero(mask)).T)
+    box = cv2.boxPoints(rect).astype(np.int)
+
+y0, x0 = box.min(axis=0)
+y1, x1 = box.max(axis=0)
+img = image[y0:y1, x0:x1]
+io.imshow(img)
+plt.show()
+box[:, 0] -= y0
+box[:, 1] -= x0
+# 调整box顺序，从左上角开始，逆时针转动
+i0 = (box[:, 0] + box[:, 1]).argmin()
+box = box[[i0, (i0 + 1) % 4, (i0 + 2) % 4, (i0 + 3) % 4]]
+plt.scatter(box[:, 1], box[:, 0], c='r')
+# 2.矫正车牌
+h = np.max([box[1][0] - box[0][0], box[2][0] - box[3][0]])
+w = np.max([box[2][1] - box[1][1], box[3][1] - box[0][1]])
+box2 = np.array([(0, 0), (h, 0), (h, w), (0, w)])
+M = cv2.getPerspectiveTransform(box[:, ::-1].astype(np.float32), box2[:, ::-1].astype(np.float32))
+img = cv2.warpPerspective(img, M, (w, h))
+img = cv2.resize(img, (220, 70))
+io.imshow(img)
+plt.show()
