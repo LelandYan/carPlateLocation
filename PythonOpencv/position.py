@@ -42,10 +42,22 @@ class LPRAlg:
         cv.imshow("imgResize", img)
 
         # Step2: Prepare to find contours
+        # 双边滤波
+        # img1 = cv.bilateralFilter(img, 9, 75, 75)
+        # cv.imshow("img1", img1)
+        # 高斯滤波
         img = cv.GaussianBlur(img, (3, 3), 0)
         imgGary = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-        # cv.imshow("imgGary", imgGary)
 
+        # cv.imshow("imgGary", imgGary)
+        # 全局直方图均衡化
+        # dst = cv.equalizeHist(imgGary)
+
+        # 自适应直方图均衡化
+        clahe = cv.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        imgGary = clahe.apply(imgGary)
+        # cv.imshow("dst", dst)
+        # cv.imshow("dst1", imgGary)
         kernel = np.ones((20, 20), np.uint8)
         imgOpen = cv.morphologyEx(imgGary, cv.MORPH_OPEN, kernel)
         # cv.imshow("imgOpen", imgOpen)
