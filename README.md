@@ -11,9 +11,25 @@
 
 **本项目使用的数据集为246张中文车牌数据集, 数据来源**:https://gitee.com/easypr/EasyPR/tree/master/resources/image/general_test
 
+## 其他数据来源
+
+中文车牌数据 https://github.com/airxiechao/simple-car-plate-recognition
+
+英文车牌数据 http://www.medialab.ntua.gr/research/LPRdatabase.html
+
 **数据标注工具**: 
 
 **labelImg 项目地址**:https://github.com/tzutalin/labelImg
+
+**win10+anaconda**安装教程:
+
+```python
+conda create -n labelmg python=3.6
+conda activate labelmg
+conda install pyqt=5
+pyrcc5 -o libs/resources.py resources.qrc
+python labelImg.py
+```
 
 **VGG Image Annotator VIA**:http://www.robots.ox.ac.uk/~vgg/software/via/
 
