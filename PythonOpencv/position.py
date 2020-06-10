@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import sys, os, json, random
 
 
-class LPRAlg:
+class CarPlateLocation:
     maxLength = 700
     minArea = 2000
 
@@ -145,6 +145,6 @@ class LPRAlg:
 
 
 if __name__ == '__main__':
-    L = LPRAlg("197.jpg")
+    L = CarPlateLocation("197.jpg")
     L.findVehiclePlate()
-    cv.waitKey(0)
+    # cv.waitKey(0)
